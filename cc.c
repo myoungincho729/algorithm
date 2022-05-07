@@ -26,7 +26,7 @@ int main(void){
 
     int i;
     for (i=0;i<max_len;i++){
-        if (pa[i] == pb[i]){
+        if (*(pa+i)==*(pb+i)){
             printf("O");
         }
         else {
