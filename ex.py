@@ -1,18 +1,11 @@
-def tsum(nums):
-    ans = []
-    nums.sort()
-    for i in range(len(nums)-2):
-        if  i>0 and nums[i]==nums[i-1]:
-            continue
-        for j in range(i+1,len(nums)-1):
-            if  j>i+1 and nums[j]==nums[j-1]:
-                continue
-            for k in range(j+1,len(nums)):
-                if  k>j+1 and nums[k]==nums[k-1]:
-                    continue
-                if nums[i] + nums[j] + nums[k] == 0:
-                    ans.append([nums[i], nums[j], nums[k]])
-    
-    return ans
-
-print(tsum([-1,0,1,2,-1,4]))
+def duplicateZeros(arr):
+    i = 0
+    while i < len(arr)-1:
+        if arr[i]==0:
+            for j in range(len(arr)-1,i+1,-1):
+                arr[j] = arr[j-1]
+            arr[i+1] = 0
+            i += 1
+        i += 1
+    return arr
+print(duplicateZeros([1,0,2,3,0,4,5,0]))
