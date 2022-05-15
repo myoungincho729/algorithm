@@ -7,6 +7,7 @@ struct address
     char name[20];
     int age;
     char address[80];
+    
 };
 
 int main(void) {
