@@ -9,7 +9,7 @@ int main(void){
 
     input_arr(arr,size);
     max = find_max(arr, size);
-    printf("max : %d\n", max);
+    printf("max : %d\n",  max);
 
     return 0;
 }
